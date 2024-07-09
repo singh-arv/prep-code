@@ -14,9 +14,9 @@ async function mapLimit(arr, limit, fn) {
   return result;
 }
 
-async function processItem(arr, arr_index, fn, result) {
-  console.log("added item ", arr_index);
-  const data = await new Promise((res) => res(fn(arr[arr_index])));
+async function processItem(arr, index, fn) {
+  console.log("added item ", index);
+  const data = await new Promise((res) => res(fn(arr[index])));
   return data;
 }
 
